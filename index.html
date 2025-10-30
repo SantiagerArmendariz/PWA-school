@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio Digital</title>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="custom/logo-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="custom/logo-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="custom/logo-64x64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="128x128"
+      href="custom/logo-128x128.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="custom/logo-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="256x256"
+      href="custom/logo-256x256.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="384x384"
+      href="custom/logo-384x384.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="custom/logo-512x512.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="1024x1024"
+      href="custom/logo-1024x1024.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="custom/logo-192x192.png"
+    />
+    <meta name="theme-color" content="#3B82F6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="Mi Portafolio Digital" />
+    <meta name="application-name" content="Mi Portafolio Digital" />
+    <meta
+      name="description"
+      content="Portafolio digital de Luis Santiago Armendáriz - Desarrollador Frontend especializado en crear experiencias digitales increíbles"
+    />
+    <meta
+      name="keywords"
+      content="portafolio, desarrollador, frontend, web, javascript, react, html, css"
+    />
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/animations.css" />
+  </head>
+  <body>
+    <!-- PWA Install Banner -->
+    <div id="install-banner" class="install-banner hidden">
+      <div class="install-content">
+        <i class="fas fa-download install-icon"></i>
+        <div class="install-text">
+          <h3>Instalar Portafolio</h3>
+          <p>Instala esta app para acceso rápido y experiencia offline</p>
+        </div>
+        <div class="install-buttons">
+          <button id="install-button" class="button button--small">
+            Instalar
+          </button>
+          <button id="dismiss-button" class="button button--small button-white">
+            Después
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Offline Indicator -->
+    <div id="offline-indicator" class="offline-indicator hidden">
+      <i class="fas fa-wifi-slash"></i>
+      <span>Sin conexión - Modo offline</span>
+    </div>
+
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-text">Portafolio</span>
+        </a>
+
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#home" class="nav-link active-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">Sobre Mí</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contacto</a>
+            </li>
+          </ul>
+          <i class="fas fa-times nav-close" id="nav-close"></i>
+        </div>
+
+        <div class="nav-toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="home section" id="home">
+        <div class="home-container container grid">
+          <div class="home-content grid">
+            <div class="home-social">
+              <a href="#" class="home-social-icon" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="home-social-icon" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="home-social-icon" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+
+            <div class="home-img">
+              <div class="home-img-bg">
+                <img
+                  src="./custom/me.jpeg"
+                  alt="Perfil"
+                  class="home-img-picture"
+                />
+              </div>
+            </div>
+
+            <div class="home-data">
+              <h1 class="home-title">
+                Hola, soy
+                <span class="text-gradient">Luis Santiago Armendáriz</span>
+              </h1>
+              <h3 class="home-subtitle">
+                <span class="typing-text"></span>
+              </h3>
+              <p class="home-description">
+                Desarrollador apasionado por crear experiencias digitales
+                increíbles. Especializado en desarrollo web moderno y diseño de
+                interfaces de usuario.
+              </p>
+              <a href="#contact" class="button button--flex home-button">
+                Contactáme <i class="fas fa-paper-plane button-icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="home-scroll">
+            <a href="#about" class="home-scroll-button button--flex">
+              <i class="fas fa-mouse home-scroll-mouse"></i>
+              <span class="home-scroll-name">Scroll down</span>
+              <i class="fas fa-arrow-down home-scroll-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <h2 class="section-title">Sobre Mí</h2>
+        <span class="section-subtitle">Mi introducción</span>
+
+        <div class="about-container container grid">
+          <img src="./custom/me3.jpeg" alt="Sobre mí" class="about-img" />
+
+          <div class="about-data">
+            <p class="about-description">
+              Desarrollador web con más de 3 años de experiencia, trabajando con
+              tecnologías modernas para crear aplicaciones web eficientes y
+              atractivas. Me encanta resolver problemas complejos y convertir
+              ideas en realidades digitales.
+            </p>
+
+            <div class="about-info">
+              <div>
+                <span class="about-info-title">08+</span>
+                <span class="about-info-name">Años<br />experiencia</span>
+              </div>
+
+              <div>
+                <span class="about-info-title">20+</span>
+                <span class="about-info-name">Proyectos<br />completados</span>
+              </div>
+
+              <div>
+                <span class="about-info-title">05+</span>
+                <span class="about-info-name">Empresas<br />trabajadas</span>
+              </div>
+            </div>
+
+            <div class="about-buttons">
+              <a
+                download=""
+                href="assets/pdf/CV.pdf"
+                class="button button--flex"
+              >
+                Descargar CV <i class="fas fa-download button-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Habilidades</h2>
+        <span class="section-subtitle">Mi nivel técnico</span>
+
+        <div class="skills-container container grid">
+          <div>
+            <div class="skills-content skills-open">
+              <div class="skills-header">
+                <i class="fas fa-code skills-icon"></i>
+                <div>
+                  <h1 class="skills-title">Desarrollo Frontend</h1>
+                  <span class="skills-subtitle">Más de 4 años</span>
+                </div>
+                <i class="fas fa-angle-down skills-arrow"></i>
+              </div>
+
+              <div class="skills-list grid">
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">HTML</h3>
+                    <span class="skills-number">90%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-html"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">CSS</h3>
+                    <span class="skills-number">80%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-css"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">JavaScript</h3>
+                    <span class="skills-number">85%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-js"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">React</h3>
+                    <span class="skills-number">75%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-react"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-content skills-close">
+              <div class="skills-header">
+                <i class="fas fa-server skills-icon"></i>
+                <div>
+                  <h1 class="skills-title">Desarrollo Backend</h1>
+                  <span class="skills-subtitle">Más de 2 años</span>
+                </div>
+                <i class="fas fa-angle-down skills-arrow"></i>
+              </div>
+
+              <div class="skills-list grid">
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">Node.js</h3>
+                    <span class="skills-number">70%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-node"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">MongoDB</h3>
+                    <span class="skills-number">60%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-mongo"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">Python</h3>
+                    <span class="skills-number">65%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-python"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="skills-content skills-close">
+              <div class="skills-header">
+                <i class="fas fa-palette skills-icon"></i>
+                <div>
+                  <h1 class="skills-title">Diseño UI/UX</h1>
+                  <span class="skills-subtitle">Más de 3 años</span>
+                </div>
+                <i class="fas fa-angle-down skills-arrow"></i>
+              </div>
+
+              <div class="skills-list grid">
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">Figma</h3>
+                    <span class="skills-number">80%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-figma"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">Adobe XD</h3>
+                    <span class="skills-number">70%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-xd"></span>
+                  </div>
+                </div>
+
+                <div class="skills-data">
+                  <div class="skills-titles">
+                    <h3 class="skills-name">Photoshop</h3>
+                    <span class="skills-number">75%</span>
+                  </div>
+                  <div class="skills-bar">
+                    <span class="skills-percentage skills-photoshop"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section-title">Proyectos</h2>
+        <span class="section-subtitle">Trabajos más recientes</span>
+
+        <div class="portfolio-container container grid">
+          <div class="portfolio-content grid">
+            <img
+              src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg"
+              alt=""
+              class="portfolio-img"
+            />
+
+            <div class="portfolio-data">
+              <h3 class="portfolio-title">E-commerce Moderno</h3>
+              <p class="portfolio-description">
+                Aplicación web de comercio electrónico con React, Node.js y
+                MongoDB. Incluye carrito de compras, pagos y panel de
+                administración.
+              </p>
+              <div class="portfolio-buttons">
+                <a
+                  href="#"
+                  class="button button--flex button--small portfolio-button"
+                >
+                  Ver Demo <i class="fas fa-external-link-alt button-icon"></i>
+                </a>
+                <a
+                  href="#"
+                  class="button button--flex button--small button-white portfolio-button"
+                >
+                  <i class="fab fa-github button-icon"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-content grid">
+            <img
+              src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg"
+              alt=""
+              class="portfolio-img"
+            />
+
+            <div class="portfolio-data">
+              <h3 class="portfolio-title">App de Gestión</h3>
+              <p class="portfolio-description">
+                Sistema de gestión empresarial con dashboard interactivo,
+                análisis de datos en tiempo real y gestión de usuarios.
+              </p>
+              <div class="portfolio-buttons">
+                <a
+                  href="#"
+                  class="button button--flex button--small portfolio-button"
+                >
+                  Ver Demo <i class="fas fa-external-link-alt button-icon"></i>
+                </a>
+                <a
+                  href="#"
+                  class="button button--flex button--small button-white portfolio-button"
+                >
+                  <i class="fab fa-github button-icon"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-content grid">
+            <img
+              src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
+              alt=""
+              class="portfolio-img"
+            />
+
+            <div class="portfolio-data">
+              <h3 class="portfolio-title">Landing Page Corporativa</h3>
+              <p class="portfolio-description">
+                Sitio web corporativo responsive con animaciones CSS, optimizada
+                para SEO y alta performance.
+              </p>
+              <div class="portfolio-buttons">
+                <a
+                  href="#"
+                  class="button button--flex button--small portfolio-button"
+                >
+                  Ver Demo <i class="fas fa-external-link-alt button-icon"></i>
+                </a>
+                <a
+                  href="#"
+                  class="button button--flex button--small button-white portfolio-button"
+                >
+                  <i class="fab fa-github button-icon"></i> Código
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contacto</h2>
+        <span class="section-subtitle">Ponte en contacto</span>
+
+        <div class="contact-container container grid">
+          <div>
+            <div class="contact-information">
+              <i class="fas fa-phone contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Llámame</h3>
+                <span class="contact-subtitle">+639 115 11 38</span>
+              </div>
+            </div>
+
+            <div class="contact-information">
+              <i class="fas fa-envelope contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Email</h3>
+                <span class="contact-subtitle"
+                  >santiagerrgames@ejemplo.com</span
+                >
+              </div>
+            </div>
+
+            <div class="contact-information">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <div>
+                <h3 class="contact-title">Ubicación</h3>
+                <span class="contact-subtitle">Chihuahua, Chihuahua</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact-form grid" id="contact-form">
+            <div class="contact-inputs grid">
+              <div class="contact-content">
+                <label for="" class="contact-label">Nombre</label>
+                <input type="text" class="contact-input" required />
+              </div>
+              <div class="contact-content">
+                <label for="" class="contact-label">Email</label>
+                <input type="email" class="contact-input" required />
+              </div>
+            </div>
+            <div class="contact-content">
+              <label for="" class="contact-label">Proyecto</label>
+              <input type="text" class="contact-input" required />
+            </div>
+            <div class="contact-content">
+              <label for="" class="contact-label">Mensaje</label>
+              <textarea
+                name=""
+                id=""
+                cols="0"
+                rows="7"
+                class="contact-input"
+                required
+              ></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="button button--flex">
+                Enviar Mensaje
+                <i class="fas fa-paper-plane button-icon"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-bg">
+        <div class="footer-container container grid">
+          <div>
+            <h1 class="footer-title">Mi Portfolio</h1>
+            <span class="footer-subtitle">Desarrollador Frontend</span>
+          </div>
+
+          <ul class="footer-links">
+            <li>
+              <a href="#skills" class="footer-link">Habilidades</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer-link">Proyectos</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer-link">Contacto</a>
+            </li>
+          </ul>
+
+          <div class="footer-socials">
+            <a href="#" target="_blank" class="footer-social">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" class="footer-social">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" class="footer-social">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <p class="footer-copy">
+          &#169; Luis Santiago Armendáriz Rodríguez. Todos los derechos
+          reservados
+        </p>
+      </div>
+    </footer>
+
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="fas fa-arrow-up scrollup-icon"></i>
+    </a>
+
+    <script src="main.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/animations.js"></script>
+  </body>
+</html>

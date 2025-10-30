@@ -1,0 +1,307 @@
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px var(--first-color);
+    }
+    to {
+        box-shadow: 0 0 20px var(--first-color), 0 0 30px var(--first-color);
+    }
+}
+
+/* Scroll Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Home Animations */
+.home-img {
+    animation: float 6s ease-in-out infinite;
+}
+
+.home-social-icon {
+    transition: all 0.3s ease;
+}
+
+.home-social-icon:hover {
+    animation: bounce 1s;
+}
+
+.home-scroll-button {
+    animation: bounce 2s infinite;
+}
+
+/* Skills Animations */
+.skills-percentage {
+    width: 0%;
+    transition: width 2s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+.skills-percentage.animate {
+    animation: skillsAnimation 2s ease-in-out;
+}
+
+@keyframes skillsAnimation {
+    0% { width: 0%; }
+}
+
+/* Portfolio Hover Effects */
+.portfolio-content {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.portfolio-content:hover::before {
+    transform: translateX(100%);
+}
+
+.portfolio-img {
+    transition: all 0.3s ease;
+}
+
+.portfolio-content:hover .portfolio-img {
+    transform: scale(1.05);
+}
+
+/* Button Animations */
+.button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.button:hover::before {
+    left: 100%;
+}
+
+.button:hover {
+    animation: pulse 0.3s;
+}
+
+/* Contact Form Animations */
+.contact-input:focus {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.contact-content {
+    transition: all 0.3s ease;
+}
+
+.contact-content:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Animations */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--first-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active-link::after {
+    width: 100%;
+}
+
+/* Loading Animation for Skills */
+@keyframes loadSkill {
+    from { width: 0; }
+}
+
+/* Staggered Animation for Portfolio Items */
+.portfolio-content:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.portfolio-content:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.portfolio-content:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Text Gradient Animation */
+.text-gradient {
+    background-size: 200% auto;
+    animation: textGradient 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Scroll Reveal Animations */
+.sr-hidden {
+    visibility: hidden;
+}
+
+/* Social Icons Hover */
+.home-social-icon,
+.footer-social {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* About Info Animation */
+.about-info div {
+    transition: all 0.3s ease;
+}
+
+.about-info div:hover {
+    transform: translateY(-5px);
+    animation: pulse 0.5s;
+}
+
+/* Mobile Menu Animation */
+@media screen and (max-width: 767px) {
+    .show-menu {
+        animation: slideInUp 0.3s ease;
+    }
+}
+
+/* Typing Animation for Subtitle */
+.typing-text {
+    display: inline;
+    border-right: 2px solid var(--first-color);
+    animation: typing 4s steps(40, end) infinite,
+               blink-caret 0.75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    0%, 50% { width: 0; }
+    10%, 40% { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--first-color); }
+}
